@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>...</title>
+
+    <style>
+        #parfums span {
+            padding: .5em;
+            margin: 1em;
+            border: 1px solid blue;
+        }
+
+        #parfums span:hover {
+            background-color: #ffa;
+        }
+    </style>
+</head>
+
+<body>
+
+<p id="parfums">
+    <span>Fraise</span>
+    <span>Chocolat</span>
+    <span>Vanille</span>
+</p>
+
+<ul id="panier">
+</ul>
+
+<script>
+    let parfums = document.querySelectorAll("#parfums span");
+
+let panier = document.getElementById("panier");
+
+for (let i = 0; i < parfums.length; i++) {
+
+    parfums[i].addEventListener("click", function () {
+
+        let text = this.textContent;
+
+        let li = document.createElement("li");
+        li.textContent = text;
+
+        panier.append(li);
+
+        this.remove();
+    });
+
+}
+</script>
+
+</body>
+</html>

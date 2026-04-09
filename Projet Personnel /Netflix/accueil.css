@@ -1,0 +1,70 @@
+html
+{
+    text-align: center;
+    min-height: 100vh; /* problème avec le background image vu que le code il est petit faut utiliser ça pour que le background prenne tout l'espace de la fenêtre */
+    background-repeat: no-repeat; 
+    background-image:  linear-gradient(black, rgb(18, 18, 18) 10%);
+    background-attachment:scroll;
+
+
+}
+
+body{
+        
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        
+         
+}
+
+/* Le grand titre*/
+h1
+{
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-weight:400;
+    top: 28%;
+    left: 40%;
+}
+
+/* Les profils */
+.PP
+{
+  margin: 5px;
+}
+
+.profil
+{
+    position: absolute;
+    top: 42.5%;
+    left: 21%;
+    display: flex;
+    gap: 20px;
+   
+
+    
+}
+a img
+{
+    width: 140px;
+    height: 140px;
+    border-radius: 4%;
+    border: solid 3px transparent;
+}
+
+/* Titre des profils */
+
+h2
+{
+    color: rgb(117, 117, 117);
+    font-size: 20px;
+    font-weight: 400;
+    
+    
+}
+a{
+    text-decoration: none;
+}
+
+/* voir ce que c'est justify-content: space-evenly;*/

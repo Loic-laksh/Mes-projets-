@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Netflix clone</title>
+<link rel="stylesheet" href="index.css">
+<link rel="icon" href="net.jpeg" >
+</head>
+
+
+<body>
+
+ <header>
+        <nav class="table">   
+            <div >
+            <ul>
+                <li id="titre" > Netflix </li>
+                <li>Accueil</li>
+                <li class="titre_grisé">Séries</li>
+                <li class="titre_grisé">Films</li>
+                <li class="titre_grisé">Jeux</li>
+                <li class="titre_grisé">Nouveautés les plus regardées</li>
+                <li class="titre_grisé">Ma liste</li>
+                <li class="titre_grisé">Explorer par langue</li>
+                <li class="position_droite" ><img src="loupe.png" alt="Recherche" width="30" height="25" ></li>
+                <li class="position_droite">Notifications</li>
+                <li class="position_droite">Profil</li>
+
+            </ul>
+            </div>
+        </nav>
+
+        
+        <img src="One piece titre .png" alt="titre one piece" id="image_video">
+            <video >
+                <source src="one piece.mp4" type="video/mp4">
+                <source src="p.ogg" type="video/ogg">
+            </video>
+            <button id="play"  class="ensemble_bouton" > play </button>
+
+        <p id="texte_introductif"> 
+            Voici mon projet personnel : un clone de Netflix réalisé avec du <strong> HTML, CSS et du Javascript</strong>,  
+            où j'ai essayé de recréer l'interface et les principales fonctionnalités pour m'entrainer  
+            au développement front-end
+        </p>
+
+
+
+
+
+       
+
+<div class="ensemble_bouton" > 
+    <button class="bouton">
+        <ul>
+            <li><img src="lecture.png" alt="lecture" width="25" height="20"> </li>
+            <li><b> Lecture </b> </li>
+        </ul>
+        
+        
+    </button> 
+    <button id="bouton1">
+        <ul>
+            <li><img src="infobg.png" alt="lecture" width="28" height="20"> </li>
+            <li><b> Plus d'info </b> </li>
+        </ul>
+        
+        
+    </button> 
+
+
+</div>
+
+</header>
+
+
+<p class="Titre"> Notre sélection pour vous </p>   <div class="apparition"> Tout explorer ></div>
+<div class="rectangle_affichage">
+<div class="e_image">
+        <div class="content">
+                <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABf7VczWgPtgGbPoIpai5xbbV_eSXs4-p89PdLDvpkTkP9M4S64Dtv5Nm-zglAiQkan1cEnguDAHzUNd_q28V_1LIYZCzuHZzy0s.jpg?r=37b" alt="xbox" class="imge"/>
+                <div class="description">
+                    Mysterieux ⸱ Fantastique ⸱ Onirique <br>
+                    Mysterieux ⸱ Fantastique ⸱ Onirique<br>
+                    Mysterieux ⸱ Fantastique ⸱ Onirique<br>
+                    Mysterieux ⸱ Fantastique ⸱ Onirique<br>
+                </div>
+        </div>
+ 
+    
+
+
+
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbhhFKVk6plGhvuTCsTfVK6Buuq9uN9zkjCLB3J9OmiQ0SUFQYPyFatbF0TKmgaajIeHBlXNZ5jNWhUaQfgEx3rUPWwIh-IlC2k.jpg?r=01d" alt="Breaking bad"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYmv2m5av9ka6y-IafcTfvPWrgPO1wxzibWi_u9yCpZC-UGoZ-lvkNYoADf1GIlgB1YaPFKHOzpb73h_yK72kwyQKBPvZK9YtvQ.jpg?r=ece" alt="Spyxfamily" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfl3EoYVrlVXfMXgoQCohWFtd22nuqqye8zTISnZ3H_PqK2Ay7qWOTo_ToKYomQUAiuXbyJkX7BzHhc9cvOjYlKR-TVcxdsd-Cx9agHjFkaz8Oz5eFtoqZZsM6qszXRhBdCLU35cm73GVf80uN1360oMSxT_UZnAWqI.jpg?r=ce8" alt="Stranger things" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcfyOQppF5SDQRdDQ6x6nncB3Cmg5qkY9ep6DVI22cTHo5M9BY5WoDXqXcRbHNxNm_HSZTG8mQVdYaavXfFngMNuW5FabeN7O3A.jpg?r=d31" alt="dark" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABY-Qdr2suzjigPdvgKtFfCZmKi_CrJySAd3TCcVKpBNhldc9kOHrBvIEy2AF0_kkxyWdcYD3v7Z3BTIevxlGtZbXWnVZnffaNpg.jpg?r=170" alt= "vinland saga"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcfyOQppF5SDQRdDQ6x6nncB3Cmg5qkY9ep6DVI22cTHo5M9BY5WoDXqXcRbHNxNm_HSZTG8mQVdYaavXfFngMNuW5FabeN7O3A.jpg?r=d31" alt="dark" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbhhFKVk6plGhvuTCsTfVK6Buuq9uN9zkjCLB3J9OmiQ0SUFQYPyFatbF0TKmgaajIeHBlXNZ5jNWhUaQfgEx3rUPWwIh-IlC2k.jpg?r=01d" alt="Breaking bad"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABYmv2m5av9ka6y-IafcTfvPWrgPO1wxzibWi_u9yCpZC-UGoZ-lvkNYoADf1GIlgB1YaPFKHOzpb73h_yK72kwyQKBPvZK9YtvQ.jpg?r=ece" alt="Spyxfamily" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfl3EoYVrlVXfMXgoQCohWFtd22nuqqye8zTISnZ3H_PqK2Ay7qWOTo_ToKYomQUAiuXbyJkX7BzHhc9cvOjYlKR-TVcxdsd-Cx9agHjFkaz8Oz5eFtoqZZsM6qszXRhBdCLU35cm73GVf80uN1360oMSxT_UZnAWqI.jpg?r=ce8" alt="Stranger things" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcfyOQppF5SDQRdDQ6x6nncB3Cmg5qkY9ep6DVI22cTHo5M9BY5WoDXqXcRbHNxNm_HSZTG8mQVdYaavXfFngMNuW5FabeN7O3A.jpg?r=d31" alt="dark" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABY-Qdr2suzjigPdvgKtFfCZmKi_CrJySAd3TCcVKpBNhldc9kOHrBvIEy2AF0_kkxyWdcYD3v7Z3BTIevxlGtZbXWnVZnffaNpg.jpg?r=170" alt= "vinland saga"  class="imge">
+
+</div>
+	<div id="fleches">
+		<span id="fle-gauche">&lt;</span>
+		<span id="fle-droite">&gt;</span>
+	</div>
+</div>
+<p class="Titre"> Ma liste </p> <div class="apparition"> Tout explorer ></div>
+    <div class="e_image ">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXyKlfeCNuWf74bYOwggBgAai6Ot6emyQY0Vf80Ks6FShhaR8O1_uTUE88Sf__JB5iYHd3JU1b1XmQg6a6rpd143WXB07Ni98_Q.jpg?r=794" alt="umbrella academy" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUFlm_DMSXLX1Cw2BnAjed85RszkAjhFsbyEWDluI_a6kIOWX0bpXpRTNCFFvAnU_mSmw1clu4Cxt3pQTzRQBdBKRdzRHyTdY-U.jpg?r=2c0" alt="gambling school" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABX8tF8KP-NWCAPFAEjU5XrPnawZ-rn0oR1OLF3NzXkmJpy20ms3oIayvGTv9E6Z1O1x8iPvd14aozNz-0ECP_CjhJe7c5KNiP4k.jpg?r=815" alt="Good dctor" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUZ3bBbY7umsvZVYsAaAe8aOM5xql9elkdqldCWKPwPFWmBiTrW5mjGqUDojqiuBuTZgbmLlbhJaVerRpVpSTJZZ0LRtBbnTXDA.jpg?r=6f5" alt="dctr strange" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABU6xz8qQhID9lj9f7pGyXaPnbMr4fbeZ-AD5FGN8Z4oj2LaoUH6UGYW7al3GLEbwdl5NOdQ0VQA830USaU862oUhBHnSpMGktnM.jpg?r=d1e" alt="The vampire diaries" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe5nwdmb-ssHNaVOSfUuQsPZn4Zin4QTXn-6HuiyMbxLeJiEbKnsWVbZfaIb8w-W6J7M2jbHZEIkUXCDjabgg9y1saQwysLHqA4.webp?r=c62" alt="La casa del papel"  class="imge">
+
+</div>
+<p class="Titre"> Incontournables </p> <div class="apparition"> Tout explorer ></div>
+<div class="e_image ">
+    
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTOsfCEfqO1wxpjZZJQpgUYgCire5xHxcIpF9teRhisJXc1v7marbpdNY6RRC0xt7baL9iqGsKSmY1YnotbnFW3U-9r0kco9rDY.jpg?r=a0d" alt="The amazing spiderman" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVBwlpfnDHMWIP_PVaoYKojwKg6iEyLJkpU4DncpLgOp6ncM-B2p91Sy48f64oEbX3sy_-IMd6tm0FDEx4-SE7N5CWySXejb8vA.jpg?r=1d8" alt="The Karaté kid"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTWNUqvw5BmZcgtdqFR-2HGdazLu0GrreOpnRUYrVyNE806reptwa1zI2FBgKwfHMaxHX0OmB9BRjXwdDRayfdMvuAy-qyEhyJY.jpg?r=aa6" alt="Retour vers le futur" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABV_xvA-F0RfXxTOJ4sFLCqLRfOQagLoNbEn6NPBY9QjMLkUysautCD_0va0vMcq3vYRoVxNbpRGc0vC8gCXIvm0SDDf_bJ4LpPA.jpg?r=a65" alt="Sonic" class="imge">
+     <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABblcJTZGLL-gjNgzi7PzpfX3LHSYypDXQV8u_zgEm64CGPrHvibaiirYDrHX_fcrWFKX54fbs2NC2Hqlbq0QOeGDYvV1ZWGOvQg.jpg?r=37f" alt="Red notice" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXOjl5JN3spNOw_kPQGMEZTN3hMi1VFemNAb9NNZ_FysgMgLratxcfol3qA2SNMYGtkRf-93eL6usKE17sK2QJAzB9VNafWBgfQ.jpg?r=ef5" alt= "birdbox"  class="imge">
+
+</div>
+<p class="Titre"> Séries saluées par la critique à regarder sans modération </p> <div class="apparition"> Tout explorer ></div>
+    <div class="e_image ">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeCYACn-KWAqwudydSGr-ujZ2Qc3DPn18TPeBQ-j6fpbt6BrM9zun_zQrjRONH4i2zJnmumXCtabYAZf8b5U3n4PhtY2fuHQZ0w.jpg?r=54a" alt="Demon slayerrrr" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXDAVS_JEC9Ho6n3zEFJHiXHHOmN087BQnEp_YtRcPkyArsi5x-RoRYq0hpoZyPsVsa0nGLQFTOieYnfjXEEXEu2pmin_z-vGe4.jpg?r=feb" alt="one piece" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe5nwdmb-ssHNaVOSfUuQsPZn4Zin4QTXn-6HuiyMbxLeJiEbKnsWVbZfaIb8w-W6J7M2jbHZEIkUXCDjabgg9y1saQwysLHqA4.webp?r=c62" alt="La casa del papel"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABXCDtlRfzHKTofCqClNaNKF2K7ZFL_zBn7VlekEZDUuTSRh2305QMN2b9ui4g_fMgnnjGCckygNyUMLFdPtyy7QKRru7_0qJgAbUa6eiC5zexkbmfY1PXYENHQyyzl8v7ZNzkYwtSYfS9-sDNEmTeQzA1q9xIExkWJY.jpg?r=e9b" alt="Stranger things" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUZ3bBbY7umsvZVYsAaAe8aOM5xql9elkdqldCWKPwPFWmBiTrW5mjGqUDojqiuBuTZgbmLlbhJaVerRpVpSTJZZ0LRtBbnTXDA.jpg?r=6f5" alt="Squid Game" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABeKzVL6EKRM-CIq5AscO_ak-GgQf0Y7M3ihXcZ4tuHuDEuvtPy7_tK-PKV6__CbY6noZE8Q1ER7W80Yyvjweqt6rPqg2woNTDAI.jpg?r=b56" alt="The last dance" class="imge">
+
+</div>
+ <p class="Titre"> Parce ce que vous avez aimé Stranger Things </p>  <div class="apparition"> Tout explorer ></div>
+<div class="e_image ">
+    
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR2WKbpyBt6WgybZXlAmjBNv_MZowGUaaENPdLGnhLzwshMQA7Hq6nRjdqZoO717qXlugPrUg9tn6OsD6B-NV5x2zkraK3qXzlA.jpg?r=777" alt="Peaky blinders" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABU6xz8qQhID9lj9f7pGyXaPnbMr4fbeZ-AD5FGN8Z4oj2LaoUH6UGYW7al3GLEbwdl5NOdQ0VQA830USaU862oUhBHnSpMGktnM.jpg?r=d1e" alt="The vampire diaries" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdUnOxPAw-OEHNWh53m749mU7RnQVBjPicOk9jds7DjOoNf1cZ4VdglhWU4LqcipKswOisXmgtZghCIZ1aK1942XF-NkgzICqTU.jpg?r=bab" alt="Cobra kai" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVklInfGLloTfblJwLz6XTzGvbIxDnWAIP63d33El3ICV0pA3tmyaAbTJqF9j3cLO0EUhMaWlQzTq7pUKsf0dDGoBIeMnb4dUxA.jpg?r=fb8" alt="Lucifer" class="imge">
+     <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSa4td7cTPUhm8QpjcD-TrGYgMiW-PbcjVru1Zhw8evBJT0jxskYQp-s0rSvwF8TKDwOs0HrkJAs29FWx0emtO-l7gSrgeMOaHQ.jpg?r=d24" alt="riverdale" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTIajSPTiL48wG8847B5xKXmG_XLXF9yKSZanZmTNj6CqVbskImmyOFtjx4WzSNT98vGILAPE6hJisUKwW1Gsc9CIl8yfNUhTys.jpg?r=0a0" alt= "Enola Holmes 2"  class="imge">
+
+</div>
+<p class="Titre"> Trouvez votre prochain coup de cœur </p> <div class="apparition"> Tout explorer ></div>
+    <div class="e_image ">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABS9gcDfDhrsQsX8XRLpCmuOCPMWCVG9HTNOXgy3sq_SeapR0B7bIJEM2OXWx11vG8o5n1rMtwQFF9ssxIP0LmKQXNOgnkPoHWdc.jpg?r=dee" alt="Parasyte" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTJIiHs9QPeYAOEWO7Bqiv7VeoD43dYIx_sUVE3rxupnUvgdKNGq5iXLlloH5iy-psftgfB76ydWyWP2z9AcdgqpdlZXyG1J6YY.jpg?r=85b" alt="One punch man " class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABRIKTBJNl8_8og__7p3zFO0DQbm7M0FqZfCJ7Wii2LkXazj2inviOdjT6uzMjkiNNLW5w8p642kgmW38Fo-dsyRZXywoVN0qJRI.jpg?r=562" alt="Validé" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdmAwb0Hzrz2Y3E1FZ4pzVFmUSEW4r3x39eZoleVApBTYKRu8ZYIv6on00jxF3zOpSYp1Fbwwn3O9aE-bv0UvpfvaK2RP3y6woE.jpg?r=c0f" alt="JOJO bizarre adventure" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTCjzrh7sztSDLLFZCxpK4s_U1o81Q9snP1T1Ad-JK0MMFB_ixAoHvcipdHB3LOPFYcdGPqKG0LU5qC-5GO03IOudw2-e_Mq6G0.jpg?r=e72" alt="Full metal amchemist" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcIMEqB1NgK3OnYUQDPwf4p-LSZBjiS6ZIGqKg5_TdHEHrKLS_OOD-lrxschvMB_FpkzSPartCBZehuualwbysF85Bq0xpKBynA.jpg?r=e1b" alt="Hell paradise"  class="imge">
+
+</div>
+<p class="Titre"> Grand succès </p>   <div class="apparition"> Tout explorer ></div>
+<div class="e_image ">
+    
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd3REf64Q_BgLesn4JhgrBm9n-cHajoUDe7xG31ic5XNNTZlXnaglME9P9G3A_993Yc-R2c_Khk8bh0cYKiLs4tHS9hpuwdKW8Q.jpg?r=01c" alt="Cyberpunk" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABfO-Te5lZCpAQY2gKmJyhVjDRDO1oAmG_OhVuURN5tT2C-Qgrwedj7kTX1r9dmng4l1nRtCBTAqdC6QMcxzoTLHDn-Ed8Ddj4ek.jpg?r=1eb" alt="Family business"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSjgpRP2FAAQlrUNfd_bq1TDaaqOk4lZcef7CYjPchSZ5UYKbEsJzhz-QBYdVnqg-3m_EfDHSTjxvn1_mxABBUHdTIDEZwQP2U8.jpg?r=434" alt="Glass Onion" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUEkbi3mqR99RTRBG8Jy-9LtewUPAEZkAma5zx7S3oEDzVaJKJ_BGPg4Zcgggysn9Z6OrstKo-ojaDyXOl3eF2DYpXFsX40LEUg.jpg?r=8d4" alt="Black mirror" class="imge">
+     <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABVrin3zzhhvp6YMyLAD9eHmw_GrL6CcOxXWE4RzHjJYsboKTFmdR2k_Ct28PXvTEIAwV1-F4VBKPE7PHpRncaPSGdIqqhXoSVLc.jpg?r=11e" alt="Devil may cry" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTybtxCiPvJN2QewNAZeYq-vAkNQfUstQ0b8MbvYpN3cz4DG80TD2IhSmN2PGCxdzKguI_7H3sWpzxbbEjtJBve3H8KgKUJqCSQ.jpg?r=f18" alt= "Manifest"  class="imge">
+
+</div>
+<p class="Titre"> Besoin de rire ? </p> <div class="apparition"> Tout explorer ></div>
+    <div class="e_image ">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdr28vCbBzwlKc_tYoxdslgVwLy7OAVqOi4jXF7L6IUzTqC0Q3tJm6xoFtnJ7t-KooFnRG5fvFxZVakqiMfrH_7hlaG8rW1hgx9jDyBYlH21-YluNGVXSSLQobX9wKOEsx8Q9K63tfCE2vB3v_lr29tno88ZhYxm8h0k9Rm9vbM.jpg?r=eb5" alt="2 broke girls" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABTp448p7ywZYJ7V7qs6vMNLCuzASfUQw1a0FPZIqdCkxmJLLHhDIJKP_wRIzLuVKPt4T0B5t56xCX_gB4GenlJp051T6S5-78EQ.jpg?r=e42" alt="Loups garous" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABftjASjpbdmUOZ2-uMRObd-NQhH727UpjKfGa4-8sPaPK6lIKM6nAE19PAoJNugoflUcPiZ5yI_6YN6MZ_6Jzan7glCVF2jU9SU.jpg?r=165" alt="Aladin"  class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUHtn5CPs-yOx5LZdEC_FTxdowbPP-GVvqqUoHoZfsVigpAeMyoiAHp3wamh5xxCFZh8KxSSUUJAIo-g9wrjRNmqHlw2a5dq2A8.jpg?r=d11" alt="Pourri gâté" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABcHAor4gY8RMfSBijuRvExfVH3J-j041GyrrQLB_VIr57mvz9RuaTWmcKoik3ZpIOvc7tapQR1T1QY3iX0ICzO15LRNnDCT7ZV4.jpg?r=f40" alt="Seul face à un bébé" class="imge">
+    <img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABWlyX61jXvB1lir7CGr8UpLAaLuO8feFDyzR3sIkdv8EgKdCUAE_sAxLJZFELzGfanyGDYmvASUpB5mIzYQYIzX1qrH3OtFt18s.jpg?r=dc6" alt="Bad boys" class="imge">
+
+</div>
+<footer>
+
+
+
+<div id="footer">
+ 
+    <table>
+        <tr>
+            <td id="image_espace"> 
+                <div >
+                <a href="https://www.instagram.com/NetflixFR" target="_blank"><img width="30" height="60" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                <a href="https://x.com/NetflixFR" target="_blank"><img width="30" height="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="Twitter"></a>
+                <a href="https://www.facebook.com/netflixfrance" target="_blank"><img width="30" height="60" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook" ></a>
+                <a href="https://www.youtube.com/user/netflixfrance" target="_blank"><img width="30" height="60" src="https://img.freepik.com/vecteurs-premium/logo-icone-youtube-vectoriel-gratuit-noir-blanc_901408-456.jpg" alt="Youtube" ></a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td> <span>audiodescription</span> </td>
+            <td> <span>centre d'aide  </span> </td>
+            <td> <span>Cartes cadeaux </span> </td>
+            <td> <span>Presse  </span></td>
+        </tr>
+
+        <tr>
+            <td> <span>Relations Investisseurs</span> </td>
+            <td> <span>Recrutement</span> </td>
+            <td> <span>Boutique Netflix</span> </td>
+            <td> <span>Condition d'utilisation</span> </td>
+        </tr>
+
+        <tr>
+            <td> <span>Confidentialité</span></td>  
+            <td> <span>Informations légales</span></td>
+            <td><span> Préférences cookies </span></td>
+            <td> <span> Mentions légales</span> </td>
+        </tr>
+
+        <tr>
+            <td><span> Nous contacter </span> </td>
+            <td> <span> choix lié à la pub</span></td>
+
+        </tr>
+    </table>
+</div>
+
+
+
+</footer>
+<script>
+
+        window.addEventListener('scroll',background);
+        let vid = document.querySelector("video")
+
+		function background()
+			{
+			
+              if (window.scrollY <10){
+
+                document.querySelector(".table").style.background='linear-gradient(black, rgba(18, 18, 18, 0) 85%)';
+                
+
+                
+                
+              }
+              else{
+                document.querySelector(".table").style.background='rgba(18, 18, 18,1)';
+              }
+
+              if (window.scrollY >450){
+                vid.pause();
+                titre_video.style.height="400px";
+                titre_video.style.top="20%";
+                setTimeout(function(){
+                        
+                        texte_intro.style.opacity="1";
+                        
+                }, 500);
+              }
+                
+			}
+
+        
+        let playy = document.getElementById("play")
+        playy.addEventListener("click", play)
+        let titre_video = document.getElementById("image_video");
+        let texte_intro = document.getElementById("texte_introductif");
+
+
+        function play()
+            {
+                if (vid.paused){
+
+                    vid.play();
+
+                    setTimeout(function(){
+
+                        titre_video.style.height="250px";
+                        titre_video.style.left="2%";
+                        titre_video.style.top="52%";
+                
+                    }, 2000);
+
+                    setTimeout(function(){
+                        texte_intro.style.opacity="0";}, 1800);
+                
+                }
+
+                    
+                
+                else{
+                    vid.pause();
+                    titre_video.style.height="400px";
+                    titre_video.style.top="20%";
+                    setTimeout(function(){
+                        
+                        texte_intro.style.opacity="1";
+                        
+                    }, 500)}
+
+                }
+
+
+
+        
+
+
+
+        let image= document.querySelector(".imge");
+        let contenant= document.querySelector(".content");
+        let description= document.querySelector(".description");
+        let affi;
+
+        image.addEventListener("mouseover", function(){
+            
+            affi=setTimeout(affichage, 400);
+
+            }
+        
+        )
+
+
+        function affichage(){
+            
+                    image.style.cursor="pointer";
+                    contenant.style.backgroundImage="linear-gradient(black, rgba(18, 18, 18,1) 11%)";
+                    contenant.style.scale="1.2";
+                    contenant.style.boxShadow="0px 8px 16px 0px rgba(40, 42, 42,1)";
+                    contenant.style.left="2%";
+
+                    description.style.opacity="1";
+                    description.style.pointerEvents="auto";
+                    description.style.cursor="default";
+                }
+
+        contenant.addEventListener("mouseleave", enlever)
+
+        
+        function enlever(){image.style.scale="1.0";
+        clearTimeout(affi);
+
+            contenant.style.backgroundImage="linear-gradient(black, rgba(18, 18, 18,0) 11%)";
+            contenant.style.scale="1";
+            contenant.style.boxShadow="0px 8px 16px 0px rgba(40, 42, 42,0)";
+            contenant.style.left="0%";
+
+
+            description.style.opacity="0";
+            description.style.pointerEvents="none";
+        }
+
+        let films= document.querySelectorAll(".Titre");
+        let film_descrip= document.querySelectorAll(".apparition")
+        
+
+        for ( let i=0; i< films.length; i++){
+            films[i].style.cursor="pointer";
+
+                    
+            films[i].addEventListener("mouseover", function(){
+                film_descrip[i].style.width="130px";
+                film_descrip[i].style.opacity="1";
+
+                
+
+            
+            });
+
+            films[i].addEventListener("mouseleave", function(){
+                film_descrip[i].style.width="100px";
+                film_descrip[i].style.opacity="0";
+            
+                
+        
+            });
+
+        }
+
+document.querySelector('.e_image').style.left='0px';
+
+let Droite=document.getElementById('fle-droite');
+Droite.addEventListener('click',function(){
+  console.log('Flèche droite');
+  let Images=document.querySelector('.e_image');
+  let pos=parseInt(Images.style.left);
+  pos-=410;
+  if(pos<-412*3.5){pos=-412*3.5;}
+  Images.style.left=pos+'px';
+});
+
+let Gauche=document.getElementById('fle-gauche');
+Gauche.addEventListener('click',function(){
+  console.log('Flèche gauche');
+  let Images=document.querySelector('.e_image');
+  let pos=parseInt(Images.style.left);
+  pos+=410;
+  if(pos>0){pos=0;}
+  Images.style.left=pos+'px';
+});
+
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Netflix Accueil clone</title>
+<link rel="stylesheet" href="accueil.css">
+<link rel="icon" href="net.jpeg" >
+</head>
+
+<h1> Qui est-ce ?</h1>
+
+
+<div class="profil">
+
+
+    <div class="PP">
+        <a href="index.html" target="_blank"><img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABUcrlRM8xyfkeGhiHqMFbXm9Fu-GwxdUMvjjlox3gnVq0BOeram_lFujgH17JFQ3H4_egJmrav0rdoUcSag5RXS9qSBfz9FgSw.png?r=bd7" alt="profil">
+        <h2> Profil 1 </h2> </a>
+    </div>
+    <div class="PP">
+        <a href="index.html" target="_blank"><img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABctYlCzOlqC1hdCkR_KU5IQx82pDkgFTrIrCcmcwE_Bnxjnbt8YdgfiASj0RhaTddAo0oIItoLHO-DXJK3teuJKhvILRhpJVVg.png?r=6a6g" alt="profil">
+        <h2> Profil 2 </h2></a>
+    </div>
+    <div class="PP">
+        <a href="index.html" target="_blank"><img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABROQy5lSPvS3yQujqdCzyVOaji3KgWHRsgV3aVeOtpcuCK-v0CYpovhSW4PzlOHgERpWW-o9hWsH8NKPf3Td5jmyx3WShvXCVg.png?r=1d4" alt="profil" >
+        <h2> Profil 3 </h2></a>
+
+    </div>
+
+    <div class="PP">
+        <a href="index.html" target="_blank"><img src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABdBIRcky9E8tIKqjcLeaWNoJEnTlyqEK8id4Np-PViJxx12fpRMxTrVdNNs4RrBwed_-sTeqz7C7ettlEM-Thp-kzZJJWCbBpQ.png?r=1e4" alt="profil" >
+        <h2> Profil 4 </h2></a>
+    </div>
+
+    <div class="PP">
+       <a href="index.html" target="_blank"><img  src="https://occ-0-6613-55.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABS74kVaM75LxKTQW6TUjXfjZHe50EVLsXTgnAQnfxR3yvlGk4uyAVuK4huQFDheTLpZ2d8uU6CuCyWnFYaWIBDSMEr4eAga58Q.png?r=22c" alt="jeunesse" >
+        <h2> Jeunesse </h2> </a>
+    </div>
+</div>
+<script>
+    let profil= document.querySelectorAll("a");
+
+    for(let i=0; i< profil.length ; i++){
+            profil[i].addEventListener('mouseover', function(){
+                profil[i].querySelector("h2").style.color="white";
+                profil[i].querySelector("img").style.borderColor="white"
+            });
+
+
+            profil[i].addEventListener('mouseleave', function(){
+                profil[i].querySelector("img").style.borderColor="transparent";
+                profil[i].querySelector("h2").style.color="rgb(117, 117, 117)";
+        });
+
+    }
+
+
+
+
+    
+</script>
+
+</html>
+<!-- https://i.pinimg.com/474x/60/80/81/60808105ca579916a1b3eda8768dd570.jpg ou -->

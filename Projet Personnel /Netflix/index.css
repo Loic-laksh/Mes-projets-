@@ -1,0 +1,352 @@
+html
+{
+    background-image: linear-gradient(black, rgb(18, 18, 18) 11%);
+    color: #ffffff;
+    background-attachment: scroll;
+    user-select: none;
+
+    
+}
+
+header
+{
+
+    position: relative;
+}
+
+/* La barre de navigation en haut */
+.table{
+  
+    position: fixed; /* pour que postion fixed fonctionne =>un top et un left ou sinon ça crée un espace( c'est détaché)*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(black, rgba(18, 18, 18,1) 35%);
+    transition: background 0.5s;
+    color: #FFFFFF;
+    z-index: 1; /*ça règle les problèmes des boutons on le met au premier plan */
+
+}
+
+.table ul
+{
+    display: inline-flex;
+    margin:5px;
+    padding:2px;
+    padding-left: 3%;
+    text-align: center;
+}
+#titre
+{
+    
+    font-size: 25px;
+    color:red;
+    padding-top: 0%;
+    
+}
+
+.table li
+{
+    list-style-type:none; 
+    padding-top: 1%;
+    margin:15px;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    transition: 0.35s;
+
+    
+}
+.table li:hover
+{
+    color:#989797;
+    cursor: pointer; /* ptit détail c'est juste sur netflix tu peux cliquer c'est pour changer ton curseur*/
+    transition-timing-function: ease-in-out;
+}
+
+.position_droite  /*Trois éléments sont placés à droite */
+{
+    position: relative;
+    left: 17%;
+    color: #dcdbdb;
+}
+
+.titre_grisé /* La couleur des autres titres est légèrement grisé */
+{
+    color: #dcdbdb;
+}
+
+/* Pour la video comme dark quand on ouvre netflix*/
+
+
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+/*L'image qui contient le titre de la vidéo */
+#image_video{
+    position: absolute;
+    height: 400px;
+    left : 2%;
+    top: 20%;
+    transition: height, top, 1s ease-in-out;
+    
+}
+#texte_introductif
+{
+    position: absolute;
+    left : 5%;
+    top: 57%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 20;
+    margin-right: 60%;
+    text-shadow: 0 2px 8px #58575B;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    
+
+}
+/*e de boutons*/
+
+
+.ensemble_bouton {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    display: flex;
+    gap: 20px;
+}
+
+
+/* Pour le bouton lecture et info */
+
+button
+{
+    background-color: #FFFFFF;
+    font-size: 15px;
+    border-radius: 3%;
+    border: none;
+
+    
+}
+button ul
+{
+    list-style-type:none; 
+    display:inline-flex;
+    margin:5px;
+    padding:5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bouton:hover
+{
+    background-color:#ebe8e8;
+    cursor: pointer; 
+}
+
+/* bouton info */
+
+#bouton1
+{
+    background-color: rgba(93,89,89,0.58);
+    font-size: 15px;
+    border-radius: 3%;
+    color:#FFFFFF;
+}
+#bouton1:hover
+{
+    background-color: rgba(93,89,89,0.3);
+    cursor: pointer; 
+}
+
+/* video */
+
+#play
+{    
+    left: 95%;
+    top: 82%;
+        
+}
+#play:hover
+{
+    background-color:#ebe8e8;
+    cursor: pointer; 
+}
+/* pr les image*/
+
+.e_image 
+{
+    display: flex;
+    margin: 10px;
+    padding: 20px 20px 40px 5px ;
+    gap: 10px;
+    left: 0;
+    position: relative;
+    transition: left 0.25s ease-in-out;
+    
+}
+.e_image img{
+    width:250px;    
+}
+.imge
+{
+    width:250px;
+    height:130px;
+    border-radius: 2%;
+    transition: scale 0.25s;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+
+/* pr les image description des images*/
+
+.content {
+
+  display: inline-flex;
+  position: relative;      
+  width: 250px;          
+  height: 130px;           
+  background-color: #181818;  
+  border-radius: 4px;
+  transition: all 0.25s;
+  box-shadow: 0px 8px 16px 0px rgba(0, 240, 240, 0);
+
+
+}
+
+.description {
+  position: absolute;      
+  top: 100%;             
+  left: 0;
+  width: 100%;
+  background-color: #181818;  
+  padding: 10px 0;
+  opacity: 0;
+  transition: all 0.25s;
+  text-align:center;
+  pointer-events: none;
+  font-size: 12px;
+    
+ 
+}
+
+.content img{
+
+    width: 250px;
+}
+
+/* titre pour les images */
+.Titre
+{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    display: inline-block;
+
+}
+
+a img {
+  width: 30px; 
+  height: auto;
+  border-radius: 5px;
+  filter:  grayscale(5);
+  padding: 0 5px;
+  margin-top: 0;
+}
+/* texte qui apparait à coté des titres */
+
+.apparition{
+
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100px;
+  height: 25px;
+  background-color: transparent;
+  transition: width 0.75s, opacity 2s;
+  line-height: 18px;
+  color: rgb(53, 150, 174); 
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  z-index: -1;
+  padding-bottom: 20px;
+  display: inline-block;
+
+
+  
+  }
+
+/* les flèches faisant bouger les images */
+.rectangle_affichage{
+
+    width: 100%;
+	overflow: visible;
+	position: relative;
+
+
+}
+#fleches span
+{
+	position: absolute;
+	top: 40%;
+    height:50px;
+	font-size: 30px;
+	font-family: sans;
+	background-color: rgba(0,0,0,.4);
+	color: #bbb;
+	padding: .1em;
+	cursor: pointer;
+    z-index: 10;
+}
+#fle-gauche
+{
+	left: 1%;	
+}
+#fle-droite
+{
+	right: 0%;
+}
+#fleches span:hover
+{
+	color: #fff;	
+}
+
+/* le footer */
+
+#image_espace
+{
+    padding-top: 60px;
+}
+table{
+    position: relative;
+    left: 15%;
+}
+table td
+{
+    color: #7c7b7b;
+    font-size: 15px;
+    padding: 5px 50px 5px 10px;
+    margin: auto;
+
+
+}
+
+table span:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+ 
+

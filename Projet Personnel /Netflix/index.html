@@ -22,12 +22,19 @@
                 <li class="titre_grisé">Séries</li>
                 <li class="titre_grisé">Films</li>
                 <li class="titre_grisé">Jeux</li>
-                <li class="titre_grisé">Nouveautés les plus regardées</li>
-                <li class="titre_grisé">Ma liste</li>
-                <li class="titre_grisé">Explorer par langue</li>
-                <li class="position_droite" ><img src="loupe.png" alt="Recherche" width="30" height="25" ></li>
+                <li class="titre_grisé Element_a_reduire">Nouveautés les plus regardées</li>
+                <li class="titre_grisé Element_a_reduire">Ma liste</li>
+                <li class="titre_grisé Element_a_reduire">Explorer par langue</li>
+                <li class="titre_grisé Element_a_apparaitre">
+                    Autres <ul class="sous_menu"> 
+                        <li class="titre_grisé">Nouveautés les plus regardées</li>
+                        <li class="titre_grisé">Ma liste</li>
+                        <li class="titre_grisé">Explorer par langue</li>
+                    </ul>
+                </li>
+                <li class="position_droite" ><input type="search" id="Recherche" name="q" placeholder="Titre, Films, séries ..."/></li>
                 <li class="position_droite">Notifications</li>
-                <li class="position_droite">Profil</li>
+                <li class="position_droite"><a href="accueil.html" id="lien">Profil </a></li>
 
             </ul>
             </div>
@@ -196,7 +203,7 @@
             <td id="image_espace"> 
                 <div >
                 <a href="https://www.instagram.com/NetflixFR" target="_blank"><img width="30" height="60" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
-                <a href="https://x.com/NetflixFR" target="_blank"><img width="30" height="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" alt="Twitter"></a>
+                <a href="https://x.com/NetflixFR" target="_blank"><img width="30" height="60" src="twitter.png" alt="Twitter"></a>
                 <a href="https://www.facebook.com/netflixfrance" target="_blank"><img width="30" height="60" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook" ></a>
                 <a href="https://www.youtube.com/user/netflixfrance" target="_blank"><img width="30" height="60" src="https://img.freepik.com/vecteurs-premium/logo-icone-youtube-vectoriel-gratuit-noir-blanc_901408-456.jpg" alt="Youtube" ></a>
                 </div>
@@ -234,180 +241,7 @@
 
 
 </footer>
-<script>
-
-        window.addEventListener('scroll',background);
-        let vid = document.querySelector("video")
-
-		function background()
-			{
-			
-              if (window.scrollY <10){
-
-                document.querySelector(".table").style.background='linear-gradient(black, rgba(18, 18, 18, 0) 85%)';
-                
-
-                
-                
-              }
-              else{
-                document.querySelector(".table").style.background='rgba(18, 18, 18,1)';
-              }
-
-              if (window.scrollY >450){
-                vid.pause();
-                titre_video.style.height="400px";
-                titre_video.style.top="20%";
-                setTimeout(function(){
-                        
-                        texte_intro.style.opacity="1";
-                        
-                }, 500);
-              }
-                
-			}
-
-        
-        let playy = document.getElementById("play")
-        playy.addEventListener("click", play)
-        let titre_video = document.getElementById("image_video");
-        let texte_intro = document.getElementById("texte_introductif");
-
-
-        function play()
-            {
-                if (vid.paused){
-
-                    vid.play();
-
-                    setTimeout(function(){
-
-                        titre_video.style.height="250px";
-                        titre_video.style.left="2%";
-                        titre_video.style.top="52%";
-                
-                    }, 2000);
-
-                    setTimeout(function(){
-                        texte_intro.style.opacity="0";}, 1800);
-                
-                }
-
-                    
-                
-                else{
-                    vid.pause();
-                    titre_video.style.height="400px";
-                    titre_video.style.top="20%";
-                    setTimeout(function(){
-                        
-                        texte_intro.style.opacity="1";
-                        
-                    }, 500)}
-
-                }
-
-
-
-        
-
-
-
-        let image= document.querySelector(".imge");
-        let contenant= document.querySelector(".content");
-        let description= document.querySelector(".description");
-        let affi;
-
-        image.addEventListener("mouseover", function(){
-            
-            affi=setTimeout(affichage, 400);
-
-            }
-        
-        )
-
-
-        function affichage(){
-            
-                    image.style.cursor="pointer";
-                    contenant.style.backgroundImage="linear-gradient(black, rgba(18, 18, 18,1) 11%)";
-                    contenant.style.scale="1.2";
-                    contenant.style.boxShadow="0px 8px 16px 0px rgba(40, 42, 42,1)";
-                    contenant.style.left="2%";
-
-                    description.style.opacity="1";
-                    description.style.pointerEvents="auto";
-                    description.style.cursor="default";
-                }
-
-        contenant.addEventListener("mouseleave", enlever)
-
-        
-        function enlever(){image.style.scale="1.0";
-        clearTimeout(affi);
-
-            contenant.style.backgroundImage="linear-gradient(black, rgba(18, 18, 18,0) 11%)";
-            contenant.style.scale="1";
-            contenant.style.boxShadow="0px 8px 16px 0px rgba(40, 42, 42,0)";
-            contenant.style.left="0%";
-
-
-            description.style.opacity="0";
-            description.style.pointerEvents="none";
-        }
-
-        let films= document.querySelectorAll(".Titre");
-        let film_descrip= document.querySelectorAll(".apparition")
-        
-
-        for ( let i=0; i< films.length; i++){
-            films[i].style.cursor="pointer";
-
-                    
-            films[i].addEventListener("mouseover", function(){
-                film_descrip[i].style.width="130px";
-                film_descrip[i].style.opacity="1";
-
-                
-
-            
-            });
-
-            films[i].addEventListener("mouseleave", function(){
-                film_descrip[i].style.width="100px";
-                film_descrip[i].style.opacity="0";
-            
-                
-        
-            });
-
-        }
-
-document.querySelector('.e_image').style.left='0px';
-
-let Droite=document.getElementById('fle-droite');
-Droite.addEventListener('click',function(){
-  console.log('Flèche droite');
-  let Images=document.querySelector('.e_image');
-  let pos=parseInt(Images.style.left);
-  pos-=410;
-  if(pos<-412*3.5){pos=-412*3.5;}
-  Images.style.left=pos+'px';
-});
-
-let Gauche=document.getElementById('fle-gauche');
-Gauche.addEventListener('click',function(){
-  console.log('Flèche gauche');
-  let Images=document.querySelector('.e_image');
-  let pos=parseInt(Images.style.left);
-  pos+=410;
-  if(pos>0){pos=0;}
-  Images.style.left=pos+'px';
-});
-
-
-
-</script>
+<script src="index.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,12 @@ html
     background-image: linear-gradient(black, rgb(18, 18, 18) 11%);
     color: #ffffff;
     background-attachment: scroll;
-    user-select: none;
+    /* Le user-select est différent pour chaque naviguateur faut donc utiliser plusieurs variantes */
+    user-select: none;   
+    -webkit-user-select: none; /* Pour Safari, Chrome etOpera */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer et Edge */
+   
 
     
 }
@@ -39,7 +44,7 @@ header
 #titre
 {
     
-    font-size: 25px;
+    font-size: 35px;
     color:red;
     padding-top: 0%;
     
@@ -50,12 +55,13 @@ header
     list-style-type:none; 
     padding-top: 1%;
     margin:15px;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     transition: 0.35s;
 
     
 }
+
 .table li:hover
 {
     color:#989797;
@@ -74,6 +80,47 @@ header
 {
     color: #dcdbdb;
 }
+#lien{
+    color: #dcdbdb;
+    text-decoration: none;
+}
+
+#lien:hover {
+    color:#989797;
+    transition: 0.35s;
+    transition-timing-function: ease-in-out;
+}
+
+
+/* Pour la barre de recherche */
+
+#Recherche{
+    font-size: 25px;
+    color: #fff;
+    background-image: url("search.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 22px;
+    padding-left: 35px;
+    border-radius: 20px;
+    width:0px;
+    transition: width 0.5s ease-in-out;
+    border: none;
+    outline: none;
+    
+
+
+}
+
+
+
+#Recherche::placeholder {
+  color: white;
+}
+#Recherche:hover{
+    cursor: pointer;
+}
 
 /* Pour la video comme dark quand on ouvre netflix*/
 
@@ -91,8 +138,9 @@ video {
     position: absolute;
     height: 400px;
     left : 2%;
-    top: 20%;
+    top: 12%;
     transition: height, top, 1s ease-in-out;
+    max-width: 90%;
     
 }
 #texte_introductif
@@ -103,8 +151,8 @@ video {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 20px;
     font-weight: 500;
-    padding-right: 20;
-    margin-right: 60%;
+    padding-right: 20px;
+    width: 35%;
     text-shadow: 0 2px 8px #58575B;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
@@ -128,7 +176,7 @@ video {
 button
 {
     background-color: #FFFFFF;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 3%;
     border: none;
 
@@ -155,7 +203,7 @@ button ul
 #bouton1
 {
     background-color: rgba(93,89,89,0.58);
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 3%;
     color:#FFFFFF;
 }
@@ -203,6 +251,8 @@ button ul
 }
 
 body{
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -235,7 +285,7 @@ body{
   transition: all 0.25s;
   text-align:center;
   pointer-events: none;
-  font-size: 12px;
+  font-size: 15px;
     
  
 }
@@ -249,10 +299,11 @@ body{
 .Titre
 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 500;
     padding-left: 20px;
     display: inline-block;
+    margin-top: 15px;
 
 }
 
@@ -264,6 +315,7 @@ a img {
   padding: 0 5px;
   margin-top: 0;
 }
+
 /* texte qui apparait à coté des titres */
 
 .apparition{
@@ -271,12 +323,12 @@ a img {
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100px;
-  height: 25px;
+  height: 30px;
   background-color: transparent;
   transition: width 0.75s, opacity 2s;
-  line-height: 18px;
+  line-height: 25px;
   color: rgb(53, 150, 174); 
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 500;
   opacity: 0;
   z-index: -1;
@@ -291,35 +343,39 @@ a img {
 .rectangle_affichage{
 
     width: 100%;
-	overflow: visible;
-	position: relative;
+    overflow: visible;
+    position: relative;
 
 
 }
 #fleches span
 {
-	position: absolute;
-	top: 40%;
-    height:50px;
-	font-size: 30px;
-	font-family: sans;
-	background-color: rgba(0,0,0,.4);
-	color: #bbb;
-	padding: .1em;
-	cursor: pointer;
+    position: absolute;
+    top: 7%;
+    height:60px;
+    font-size: 80px;
+    font-family: sans;
+    background-color: rgba(0,0,0,.4);
+    color: #bbb;
+    padding: .1em;
+    cursor: pointer;
     z-index: 10;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.5s;
+
 }
 #fle-gauche
 {
-	left: 1%;	
+    left: 0%;   
 }
 #fle-droite
 {
-	right: 0%;
+    right: 0%;
 }
 #fleches span:hover
 {
-	color: #fff;	
+    color: #fff;    
 }
 
 /* le footer */
@@ -335,7 +391,7 @@ table{
 table td
 {
     color: #7c7b7b;
-    font-size: 15px;
+    font-size: 18px;
     padding: 5px 50px 5px 10px;
     margin: auto;
 
@@ -348,5 +404,104 @@ table span:hover
     cursor: pointer;
 }
 
- 
+/* Pour le rendre responsive (Pour tel) */
+.Element_a_apparaitre{
+    display: none;
+}
 
+.sous_menu li {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+.Element_a_reduire{
+display: none;}
+
+.Element_a_apparaitre{
+    display: block;
+    position: relative;  
+    }
+
+ 
+    .sous_menu {
+        display: none;  
+        position: absolute;  
+        background-color: rgba(18, 18, 18, 0.95);  
+        padding: 10px;
+        top: 30px;  
+        left: 0;
+    }
+
+
+    .Element_a_apparaitre:hover .sous_menu {
+        display: block;
+    }
+
+        .Element_a_apparaitre:hover .sous_menu li {
+        display: block;
+    }
+
+    #image_video {
+        height: auto;
+        max-height: 150px;
+        top: 15%;
+    }
+
+    #texte_introductif {
+        width: 80%;
+        top: 40%;
+        font-size: 16px;
+    }
+
+    .ensemble_bouton {
+        top: 70%;
+    }
+
+    .imge, .e_image img, .content, .content img {
+        width: 150px; 
+        height: auto;
+    }
+
+}
+/* Pour le rendre responsive ( plus grand ordi) */
+
+
+@media (min-width: 1500px) {
+    #titre {
+        font-size: 60px; 
+    }
+
+    .table li {
+        font-size: 26px;  
+        margin: 30px; 
+    }
+    #texte_introductif {
+        font-size: 32px;  
+        width: 45%; 
+        line-height: 1.5; 
+    }
+
+    button, #bouton1 {
+        font-size: 26px;
+        padding: 15px 30px;  
+    }
+
+    .Titre {
+        font-size: 45px; 
+        margin-top: 50px;
+    }
+    
+    .apparition {
+        font-size: 24px;
+        width: 180px;
+    }
+    .imge, .e_image img, .content, .content img {
+        width: 400px; 
+        height: auto;
+    }
+ 
+    table td {
+        font-size: 24px;
+        padding: 15px 80px 15px 15px;
+    }
+}

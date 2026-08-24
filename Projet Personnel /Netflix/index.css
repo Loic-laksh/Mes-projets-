@@ -405,6 +405,15 @@ table span:hover
     cursor: pointer;
 }
 
+/* mon prenom et mon nom */
+
+#mon_nom {
+    font-size: 12px;
+    position: relative;
+    left : 1%;
+    color: #989797;
+}
+
 /* Pour le rendre responsive (Pour tel) */
 .Element_a_apparaitre{
     display: none;
@@ -505,6 +514,12 @@ display: none;}
     {
         font-size: 26px;
         width: 30%;
+        top: 48%;
+    }
+
+    .ensemble_bouton
+    {
+        top: 85%;
     }
 
     .imge, .e_image img, .content, .content img

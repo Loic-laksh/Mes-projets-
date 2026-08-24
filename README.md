@@ -41,6 +41,6 @@ Ce dossier contient toutes les SAÉ (Situations d'Apprentissage et d'Évaluation
 ---
 N'hésitez pas à me donner des conseils ou me donner des idées de projets !! 
 
-** Je suis à la recherche d'une alternance alors n'hésitez pas à me contacter **
+**Je suis à la recherche d'une alternance alors n'hésitez pas à me contacter**
 ---
 Voici mon mail : **loic.lakshminarayanan@gmail.com**

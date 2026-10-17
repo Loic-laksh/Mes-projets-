@@ -235,9 +235,11 @@ button ul
     margin: 10px;
     padding: 20px 20px 40px 5px ;
     gap: 10px;
-    left: 0;
     position: relative;
-    transition: left 0.25s ease-in-out;
+    transform: translateX(0);
+    transition: transform 0.45s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+    align-items: flex-start;
     
 }
 .e_image img{
@@ -261,32 +263,34 @@ body{
 
 /* pr les image description des images*/
 
+
+
 .content {
-
-  display: inline-flex;
-  position: relative;      
-  width: 250px;          
-  height: 130px;           
-  background-color: #181818;  
-  border-radius: 4px;
-  transition: all 0.25s;
-  box-shadow: 0px 8px 16px 0px rgba(0, 240, 240, 0);
-
-
+    display: inline-flex;
+    position: relative;
+    width: 250px;
+    height: 130px;
+    background-color: #181818;
+    border-radius: 4px;
+    transition: all 0.25s;
+    box-shadow: 0px 8px 16px 0px rgba(0, 240, 240, 0);
+    overflow: visible;
 }
 
+
 .description {
-  position: absolute;      
-  top: 100%;             
+  position: absolute;
+  top: 100%;
   left: 0;
   width: 100%;
-  background-color: #181818;  
+  background-color: #181818;
   padding: 10px 0;
   opacity: 0;
   transition: all 0.25s;
   text-align:center;
   pointer-events: none;
   font-size: 15px;
+  border-radius: 0 0 4px 4px;
     
  
 }
@@ -295,6 +299,8 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    border-radius: 4px;
 }
 
 /* titre pour les images */
@@ -310,7 +316,7 @@ body{
 }
 
 a img {
-  width: 30px; 
+  width: 30px;
   height: auto;
   border-radius: 5px;
   filter:  grayscale(5);
@@ -329,7 +335,7 @@ a img {
   background-color: transparent;
   transition: width 0.75s, opacity 2s;
   line-height: 25px;
-  color: rgb(53, 150, 174); 
+  color: rgb(53, 150, 174);
   font-size: 17px;
   font-weight: 500;
   opacity: 0;
@@ -470,9 +476,12 @@ display: none;}
 
     .imge, .e_image img, .content, .content img {
         width: 150px; 
-        height: auto;
+        height: 85px;
     }
-
+    .content img {
+        object-fit: cover;
+        display: block;
+    }
 }
 /* Pour les ordi portables ( selon mes autres pc et mes recherches)*/
 

@@ -37,38 +37,31 @@ let titre_video = document.getElementById("image_video");
 let texte_intro = document.getElementById("texte_introductif");
 
 
-function play()
-    {
-        if (vid.paused){
+function play() {
 
-            vid.play();
+    if (vid.paused) {
 
-            setTimeout(function(){
+        vid.play();
 
-                titre_video.style.height="250px";
-                titre_video.style.left="2%";
-                titre_video.style.top="52%";
-        
-            }, 2000);
+        titre_video.style.height = "250px";
+        titre_video.style.left = "2%";
+        titre_video.style.top = "52%";
 
-            setTimeout(function(){
-                texte_intro.style.opacity="0";}, 1800);
-        
-        }
+        texte_intro.style.opacity = "0";
 
-            
-        
-        else{
-            vid.pause();
-            titre_video.style.height="400px";
-            titre_video.style.top="20%";
-            setTimeout(function(){
-                
-                texte_intro.style.opacity="1";
-                
-            }, 500)}
+    }
+    
+    else {
 
-        }
+        vid.pause();
+
+        titre_video.style.height = "400px";
+        titre_video.style.left = "2%";
+        titre_video.style.top = "20%";
+
+        texte_intro.style.opacity = "1";
+    }
+}
 
 
 

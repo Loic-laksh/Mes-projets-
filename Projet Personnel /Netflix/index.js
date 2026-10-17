@@ -20,7 +20,7 @@ function background()
         if (window.scrollY >450){
         vid.pause();
         titre_video.style.height="400px";
-        titre_video.style.top="20%";
+        titre_video.style.top="12%";
         setTimeout(function(){
                 
                 texte_intro.style.opacity="1";
@@ -57,7 +57,7 @@ function play() {
 
         titre_video.style.height = "400px";
         titre_video.style.left = "2%";
-        titre_video.style.top = "20%";
+        titre_video.style.top = "12%";
 
         texte_intro.style.opacity = "1";
     }

@@ -1,4 +1,3 @@
-
 window.addEventListener('scroll',background);
 let vid = document.querySelector("video")
 
@@ -19,8 +18,11 @@ function background()
 
         if (window.scrollY >450){
         vid.pause();
+        clearTimeout(timerTitre);
+        clearTimeout(timerTexte);
         titre_video.style.height="400px";
-        titre_video.style.top="20%";
+        titre_video.style.left="2%";
+        titre_video.style.top="12%";
         setTimeout(function(){
                 
                 texte_intro.style.opacity="1";
@@ -35,33 +37,44 @@ let playy = document.getElementById("play")
 playy.addEventListener("click", play)
 let titre_video = document.getElementById("image_video");
 let texte_intro = document.getElementById("texte_introductif");
+let timerTitre;
+let timerTexte;
 
 
-function play() {
+function play()
+    {
+        clearTimeout(timerTitre);
+        clearTimeout(timerTexte);
 
-    if (vid.paused) {
+        if (vid.paused){
 
-        vid.play();
+            vid.play();
 
-        titre_video.style.height = "250px";
-        titre_video.style.left = "2%";
-        titre_video.style.top = "52%";
+            timerTitre=setTimeout(function(){
 
-        texte_intro.style.opacity = "0";
+                titre_video.style.height="250px";
+                titre_video.style.left="2%";
+                titre_video.style.top="52%";
+        
+            }, 2000);
 
-    }
-    
-    else {
+            timerTexte=setTimeout(function(){
+                texte_intro.style.opacity="0";}, 1800);
+        
+        }
 
-        vid.pause();
+            
+        
+        else{
+            vid.pause();
+            titre_video.style.height="400px";
+            titre_video.style.left="2%";
+            titre_video.style.top="12%";
+            texte_intro.style.opacity="1";
 
-        titre_video.style.height = "400px";
-        titre_video.style.left = "2%";
-        titre_video.style.top = "20%";
+        }
 
-        texte_intro.style.opacity = "1";
-    }
-}
+        }
 
 
 
@@ -139,69 +152,44 @@ for ( let i=0; i< films.length; i++){
 
 }
 
-let Images = document.querySelector('.e_image');
-let Droite = document.getElementById('fle-droite');
-let Gauche = document.getElementById('fle-gauche');
-let Rectangle = document.querySelector('.rectangle_affichage');
-let carouselOffset = 0;
-let carouselHover = false;
-
-function largeurPasCarousel() {
-    const premierElement = Images.firstElementChild;
-    if (!premierElement) return 410;
-
-    const largeur = premierElement.getBoundingClientRect().width;
-    const style = getComputedStyle(Images);
-    const gap = parseFloat(style.columnGap || style.gap) || 10;
-
-        return (largeur + gap) * 2;
-}
-
-function offsetMaximumCarousel() {
-    return Math.max(0, Images.scrollWidth - Rectangle.clientWidth + 20);
-}
-
-function mettreAJourFleches() {
-    if (!carouselHover) {
-        Gauche.style.opacity = "0";
-        Droite.style.opacity = "0";
-        return;
-    }
-
-    const max = offsetMaximumCarousel();
-    Gauche.style.opacity = carouselOffset > 1 ? "1" : "0";
-    Droite.style.opacity = carouselOffset < max - 1 ? "1" : "0";
-}
-
-function appliquerPositionCarousel() {
-    const max = offsetMaximumCarousel();
-    carouselOffset = Math.max(0, Math.min(carouselOffset, max));
-    Images.style.transform = `translateX(${-carouselOffset}px)`;
-    mettreAJourFleches();
-}
-
-Droite.addEventListener('click', function() {
-    carouselOffset += largeurPasCarousel();
-    appliquerPositionCarousel();
+        
+document.querySelector('.e_image').style.left='0px';
+let Images=document.querySelector('.e_image');
+let Droite=document.getElementById('fle-droite');
+Droite.addEventListener('click',function(){
+  console.log('Flèche droite');
+  let pos=parseInt(Images.style.left);
+  pos-=410;
+  if(pos<-412*3.5){pos=-412*3.5;}
+  Images.style.left=pos+'px';
 });
 
-Gauche.addEventListener('click', function() {
-    carouselOffset -= largeurPasCarousel();
-    appliquerPositionCarousel();
+let Gauche=document.getElementById('fle-gauche');
+Gauche.addEventListener('click',function(){
+  console.log('Flèche gauche');
+  let pos=parseInt(Images.style.left);
+  pos+=410;
+  if(pos>0){pos=0;}
+  Images.style.left=pos+'px';
 });
 
-Rectangle.addEventListener("mouseover", function() {
-    carouselHover = true;
-    mettreAJourFleches();
-});
+let Rectangle = document.querySelector(".rectangle_affichage");
 
-Rectangle.addEventListener("mouseleave", function() {
-    carouselHover = false;
-    mettreAJourFleches();
+Rectangle.addEventListener("mouseover", function(){
+    let pos = parseInt(Images.style.left) || 0; 
+    if (pos < 0) {
+        Gauche.style.opacity = "1";} 
+    else {
+        Gauche.style.opacity = "0";}
+    if (pos > -412 * 3.5) {
+        Droite.style.opacity = "1";} 
+    else {
+        Droite.style.opacity = "0";}
 });
-
-window.addEventListener('resize', appliquerPositionCarousel);
-appliquerPositionCarousel();
+  Rectangle.addEventListener("mouseleave", function(){
+    Droite.style.opacity="0";
+    Gauche.style.opacity="0";
+ });
 
 
  let input= document.getElementById("Recherche");
